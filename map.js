@@ -54,7 +54,7 @@ class Map {
             document.getElementById("prenomReservation").innerHTML = "votre prénom : " + localStorage.getItem("prenom");
             document.getElementById("adresseReservation").innerHTML = localStorage.getItem("station");
             if(localStorage.length !== 0){
-                compteur1.restartCountdown();
+                compteur.restartCountdown();
             };
         });
     };

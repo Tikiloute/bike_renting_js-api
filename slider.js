@@ -6,8 +6,8 @@ class Slider{
         this.cpt = cpt;
         this.sliderDom = sliderDom;
         this.timeout = {};
-        this.SlideWithButtons();
-        this.SlideWithKeys();
+        this.slideWithButtons();
+        this.slideWithKeys();
         this.slideAutomatic();
         this.breakSlider();
         this.restartSlider();
@@ -66,14 +66,14 @@ class Slider{
         this.timeout = setTimeout(() => this.slideAutomatic(), 5000);
     };
 
-    SlideWithButtons(){
+    slideWithButtons(){
         droite.addEventListener("click", () => this.movingForwardArrowButton());
         
         gauche.addEventListener("click", () => this.moveBackArrowButton());
 
     }
 
-    SlideWithKeys(){
+    slideWithKeys(){
         window.addEventListener("keydown", (e) => this.keyboard(e));
     }
 

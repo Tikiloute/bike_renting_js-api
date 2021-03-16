@@ -7,7 +7,7 @@ const images = ["photos/1.png", "photos/2.png", "photos/3.png"];
 
 const sliderDom = document.getElementById("slide");
 
-let slide1 = new Slider(images, sliderDom);
+let slide = new Slider(images, sliderDom);
 
 /**
  * Canvas-------------------------------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ let ctx = canvas.getContext("2d");
 
 let radius = 4;
 
-let dessin1 = new Draw(canvas, ctx, radius);
+let dessin = new Draw(canvas, ctx, radius);
 
 
 /**
@@ -30,7 +30,7 @@ const second = 0 +"0";
 
 const minute = 20;
 
-let compteur1 = new Timer(second, minute);
+let compteur = new Timer(second, minute);
 
 
 /**
@@ -50,9 +50,9 @@ let myIcon = L.divIcon({className: 'my-div-icon'});
 
 let myIconErreur = L.divIcon({className: 'my-div-icon-error'});
 
-let map1 = new Map();
+let map = new Map();
 
 tiles.addTo(mymap);
 
-map1.confirmButton(dessin1, compteur1);
+map.confirmButton(dessin, compteur);
 
