@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Voici l'application web de nos fameuses stations de location de vélo : Vélo'v. Ici vous pourrez réserver un vélo partout dans la ville de Lyon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Sansita+Swashed:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="photos/favicon-96x96.png">
+    <script src="canvas.js" defer></script>
+    <script src="slider.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin="" defer></script>
+    <script src="map.js" defer></script>
+    <script src="compteur.js" defer></script>
+    <script src="main.js" defer></script>
+    <title>Vélo'v</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-light bg-light">
+            <h1 class="navbar-brand"><a href="index.html">Velo'v</a></h1>
+            <a href="#blockslider" id="menuSlider">Les instructions</a>
+            <a href="#titre" id="menuMap">La Carte interractive</a>
+            <a href="#titre" id="menuReservation">Votre réservation</a>
+        </nav>
+    </header>
+  <div id="blockslider"> 
+    <div id="slider">
+        <h2>Suivez les instructions et soyez prêt à vous lancer dans votre 1ère réservation</h2>
+            <img id= "slide" src="photos/1.png" alt="explication du fonctionnement de la carte dynamique">
+            <button id="droite"> &gt; </button>
+            <button id="pause"> Pause </button>
+            <button id="reprendre"> Reprendre </button>
+            <button id="gauche"> &lt; </button>
+    </div>
+    <div id="text"></div>
+        <p id="texteSlider">Nous avons passé 3 ans a developper Velo'v dans le but de vous offrir la possibilité de vous déplacer dans Lyon, plus rapidement, à l'air libre, sans être dépendant des transports en commun.<br><br> Votre bien être est notre but, rendre la ville moins bruyante et surtout moins polluante l'est également. C'est pourquoi à travers les 421 stations que compte maintenant notre parc de vélo, nous souhaitons démocratiser ce que nous voyons être le moyen de transport du futur. <br><br> De nombreuses villes en France mais également dans le monde ont repris notre mode de fonctionnement, ce qui nous prouve mais également, vous prouve que ce que nous avons mis en place correspond à un besoin contemporain.</p>
+        <p id="texteSlider2">A travers cette application, nous souhaitons que vous puissiez profiter un maximum de nos formidables infrastructures<br><br>Il est desormais possible avec cette toute nouvelle plateforme, de réserver en ligne votre vélo dans la station que vous désirez, pour vous fini l'angoisse de savoir si un vélo est disponible ou pas, mais également vous saurez si un emplacement pour déposer votre vélo est également disponible. <br><br> Notre solution se voulait moderne à sa conception, nous avons décidé d'être moderne jusqu'au bout avec cette application, maintenant un conseil, suivez les instructions n'hésitez pas à vous lancer !<br><br> Nous espérons vous voir sur les routes très vite !</p>
+    </div>
+
+<main>
+    <h2 id="titre">Carte de la ville de Lyon</h2>
+    <div id="blocMap">
+        <div id="mapid"></div>
+        <div id="blocInfo">
+            <!--ici le block ficheReservation sera invisible juqu'à la reservation-->
+            <div id="ficheReservation">
+                <h2 id="hdeuxReservation">Votre réservation</h2>
+                <div id="adresseReservation"></div>
+                <div id="nomReservation"></div>
+                <div id="prenomReservation"></div>
+                <button id="annulerReservation">Annulez</button>
+                <div id="compteur"></div>
+            </div>
+            <!-- fin du block ficheReservation -->
+            <div id="flexInfo">
+                <div id="nomRue">Nom de la rue :</div>
+                <div id="veloDispo">Nombre de vélo disponible : </div> 
+                <div id="placeDispo">Nombre de place disponible : </div>
+                <div id="nomLabel">
+                    <form name="monForm" id="fomInput">
+                        <label for="nomUtilisateur"><input type = "text" id = "nomUtilisateur" placeholder = " Votre nom" required/></label>
+                        <label for="prenomUtilisateur"><input type = "text" id = "prenomUtilisateur" placeholder = " votre prénom" required/></label>
+                    </form>
+                    <h3>Votre signature dans l'encadré ci-dessous</h3>
+                    <div id="blockCanvas">
+                        <div id="canvasContainer">
+                            <canvas id="canvas"></canvas>
+                        </div>
+                        <div id="boutonContainer">
+                            <button id="boutonCanvas">Recommencer votre signature</button>
+                        </div>
+                    </div>
+                    <div id="boutonReserver">
+                        <button id ="boutonR">Valider</button>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</main>
+<footer>
+    <div id="copyright">www.Celemma.eu © All rights reserved</div>
+</footer>
+    
+
+    
+</body>
+</html>

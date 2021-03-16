@@ -1,0 +1,624 @@
+
+body{
+    font-family: 'Anton','Sansita Swashed', cursive;
+    background-image: url("./photos/lyon-part-dieu2.jpg");
+    background-color:black ;
+    background-repeat:no-repeat;
+    background-size: cover;
+    color: #97D2FB;
+    margin:0;
+    padding: 0;
+}
+
+header {
+    padding : 3vh;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+}
+
+a:visited{
+    color : rgb(39, 39, 173);
+}
+
+.navbar-brand :hover{
+    color: white;
+    text-shadow:2px 1px rgba(0, 0, 0, 0.8);
+}
+
+.navbar-brand{
+    text-decoration: none;
+    animation-name: brand;
+    animation-duration: 3s;
+    position: relative;
+}
+
+
+@keyframes brand{
+    0% {left:-1000px}
+    30%{left : 100px}
+    100% {left:0px}
+}
+
+
+#menuSlider, #menuMap, #menuReservation{
+    animation-name: anim;
+    animation-duration: 3s;
+    position: relative;
+}
+
+@keyframes anim{
+    0% {left:1000px}
+    30%{left : -100px}
+    100% {left:0px}
+}
+
+
+main{
+    margin-top: 5vh;
+}
+
+#menuSlider, #menuMap, #menuReservation{
+    color :rgb(39, 39, 173);
+    font-size: 2vh;
+}
+
+#menuSlider:hover{
+    color: white;
+    text-shadow:2px 1px rgba(0, 0, 0, 0.8);
+}
+
+#menuMap:hover{
+    color: white;
+    text-shadow:2px 1px rgba(0, 0, 0, 0.8);
+}
+
+#menuReservation:hover{
+    color: white;
+    text-shadow:2px 1px rgba(0, 0, 0, 0.8);
+}
+
+#menuReservation{
+    text-align: right;
+    margin: 0 3vw 0 0;
+}
+
+.navbar{
+background-color :#97D2FB !important;
+}
+
+h1{
+    text-align: left;
+    color: rgb(39, 39, 173) !important;
+    margin-left: 3vw;
+    width: 60%;
+    font-size: 3vh !important;
+}
+
+h2{
+    font-size: 3vh;
+    text-align: center;
+}
+
+main h2 {
+    text-align: left;
+    margin-left: 10vh;
+}
+
+.my-div-icon{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -115px;
+    border-radius: 50% 50% 50% 0;
+    border: 2px solid #fff;
+    width: 18px !important;
+    height: 18px !important;
+    background-color: rgb(85, 109, 190);
+    transform: rotate(-45deg);
+    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+}
+
+
+.my-div-icon:hover{
+    width: 23px !important;
+    height: 23px !important;
+}
+
+.my-div-icon-error{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -115px;
+    border-radius: 50% 50% 50% 0;
+    border: 2px solid #fff;
+    width: 18px !important;
+    height: 18px !important;
+    background-color: red;
+    transform: rotate(-45deg);
+    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+}
+
+.my-div-icon-error:hover{
+    width: 23px !important;
+    height: 23px !important;
+}
+
+.my-div-icon-fin:hover{
+    width: 23px !important;
+    height: 23px !important;
+}
+
+.my-div-icon-fin{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -115px;
+    border-radius: 50% 50% 50% 0;
+    border: 2px solid #fff;
+    width: 18px !important;
+    height: 18px !important;
+    background-color: rgb(255, 145, 0);
+    transform: rotate(-45deg);
+    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+}
+
+#blocMap{
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    width: 100%;
+    margin-bottom: 5vh;
+}
+
+#mapid {
+    display: block;
+    width: 60%;
+    margin-left: 2vh;
+    border : 2px solid rgb(39, 39, 173);
+}
+
+#canvas{
+
+    background-color: white;
+    margin : 4vh 6vw;
+    border : 2px solid rgb(39, 39, 173);
+
+}
+
+#canvasContainer{
+    margin: auto;
+    width: 100%;
+}
+
+#boutonCanvas{
+    background-color: #97D2FB;
+    width: 16vh;
+    font-size: 50%;
+    height: 6vh;
+    font-weight: bold;
+    border-radius: 5% 5%;
+    border: 3px solid rgb(39, 39, 173);
+}
+
+#boutonCanvas:hover{
+    background-color: rgb(39, 39, 173);
+    border: 3px solid white;
+    font-weight: normal;
+    color :#97D2FB;
+}
+
+#blockCanvas{
+    height : auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4vh;
+    align-items: center;
+}
+
+#blocInfo{
+    display: block;
+    width: 50%;
+}
+
+#flexInfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#prenomLabel, #nomLabel, #placeDispo, #veloDispo, #nomRue{
+    display: block;
+    height: 11vh;
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    align-items: center;
+}
+
+#boutonReserver{
+    display: block;
+    height: 16%;
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    align-items: center;
+
+}
+
+#boutonReserver button{
+    background-color: #97D2FB;
+    width: 15vh;
+    font-size: 3vh;
+    height: 5vh;
+    font-weight: bold;
+    border-radius: 5% 5%;
+    border: 3px solid rgb(39, 39, 173);
+
+}
+
+#boutonReserver button:hover{
+    background-color: rgb(39, 39, 173);
+    border: 3px solid white;
+    font-weight: normal;
+    color :#97D2FB;
+
+}
+
+input{
+    line-height: 4vh;
+    vertical-align: middle;
+    font-size: 3vh;
+    border: 3px solid rgb(39, 39, 173);
+    margin-bottom: 3vh;
+}
+
+#compteur{
+    display: block;
+}
+
+#annulerReservation{
+    display: block;
+    background-color: rgb(149, 9, 9);
+    color:white;
+    width: 15vh;
+    font-size: 3vh;
+    height: 5vh;
+    border-radius: 5% 5%;
+    border: 3px solid #97D2FB;
+    margin-left: 18.5vw;
+    margin-bottom: 4vh;
+}
+
+#annulerReservation:hover {
+    background-color: white;
+    color:rgb(149, 9, 9);
+    border: 3px solid rgb(39, 39, 173);
+}
+
+#ficheReservation{
+    display: none;
+    justify-content: center;
+}
+
+#hdeuxReservation{
+    font-size: 5vh;
+    text-align: center;
+    margin : 0;
+    margin-top: 7vh;
+    margin-bottom: 4vh;
+    width: 100%;
+}
+
+#nomReservation, #prenomReservation, #compteur, #adresseReservation{
+    display: block;
+    height: 11vh;
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    align-items: center;
+}
+
+#ficheReservation h2{
+    text-decoration: underline;
+}
+
+
+/*-------------------------------------------------------SLIDER---------------------------------------------------*/
+
+#slider{
+    position: relative;
+    width: 60vw;
+    height :80vh;
+    margin-top: 10vh;
+    margin-left : 5vh;
+    padding: auto;
+}
+
+#blockslider{
+    height: 100vh;
+    display: flex;
+}
+
+#texteSlider{
+    flex-wrap: nowrap;
+    height: 100%;
+    max-height: 90vh;
+    width: 18vw;
+    font-size: 2vh;
+    margin: 14vh 2vh 0 7vh;
+    text-overflow: clip;
+}
+
+#texteSlider2{
+    margin: 14vh 2vh 0 2vh;
+    flex-wrap: wrap;
+    height: 100%;
+    font-size: 2vh;
+    max-height: 90vh;
+    width: 18vw;
+    overflow: hidden;
+}
+
+#slide{
+    height: 100%;
+    width: 60vw;
+    flex-direction: column;
+    flex-grow: 5;
+    border : 2px solid rgb(39, 39, 173);
+
+}
+
+#droite, #gauche{
+    cursor: pointer;
+    transition: opacity 1.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    font-size: 30px;
+    color: rgba(220, 220, 220, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border :none;
+}
+
+#droite{
+    right: 0;
+}
+
+#gauche{
+    left : 0;
+}
+
+#pause, #reprendre{
+    cursor: pointer;
+    transition: opacity 1.5s ease;
+    position: absolute;
+    opacity : 0;
+    top: 90%;
+    font-size: 20px;
+    color: rgba(220, 220, 220, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#pause{
+    left: 40%;
+    width: 20%;
+    margin: 0 auto;
+    /*display: block;*/
+}
+
+#reprendre{
+    left: 40%;
+    width: 20%;
+    margin: 0 auto;
+    display: none;
+}
+
+#slider:hover #droite, #slider:hover #gauche, #slider:hover #pause, #slider:hover #reprendre{
+    opacity: 1;
+}
+
+
+ /* Medias queries entre 1301 et 1700-----------------------------------------------------------------------------------------------------------*/
+
+ @media screen and (min-width: 1301px) and (max-width: 1700px) {
+
+
+    #blockslider{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    #slider{
+        position: relative;
+        width: 95vw;
+        height :80vh;
+        margin-top: 10vh;
+        margin-left : 5vh;
+        padding: auto;
+    }
+
+    #slide{
+        height: 100%;
+        width: 95vw;
+    }
+
+    #text p{
+        width: 100vh;
+    }
+
+    #texteSlider{
+        width: 60vw;
+        font-size: 2vh;
+        margin: 12vh auto 2vh;
+    }
+
+    #texteSlider2{
+        width: 60vw;
+        font-size: 2vh;
+        margin: 2vh auto 12vh;
+    }
+
+    #blockCanvas{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }   
+
+ }
+
+
+
+
+/* Media queries < 1300px -------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 0px) and (max-width: 1300px) {
+
+
+    #blockslider{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+    }
+    
+    #slider{
+            position: relative;
+            width: 100vw;
+            height :80vh;
+            padding: auto;
+    }
+    
+    #slide{
+            height: 100%;
+            width: 95vw;
+    }
+    
+    #text p{
+            width: 100vh;
+    }
+    
+    #texteSlider{
+            width: 60vw;
+            font-size: 2vh;
+            margin: 12vh auto 2vh;
+    }
+    
+    #texteSlider2{
+            width: 60vw;
+            font-size: 2vh;
+            margin: 2vh auto 12vh;
+    }
+    
+    #blocMap {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #mapid{
+        display: block;
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+    }
+    
+    #flexInfo {
+        width : 100%;
+        margin : auto;
+        padding :auto;
+    }
+    
+
+    body{
+        font-family: 'Anton','Sansita Swashed', cursive;
+        background-image: url("./photos/lyon-part-dieu2.jpg");
+        background-color:white ;
+        background-repeat: repeat;
+        background-size: cover;
+        color: #97D2FB;
+        margin:0;
+        padding: 0;
+    }
+
+    #menuSlider, #menuMap, #menuReservation{
+       display: none; 
+    }
+
+    .navbar-brand {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 30px;
+        animation-name: brand;
+        animation-duration: 2s;
+        position: relative;
+    }
+
+
+    @keyframes brand{
+        0% {left:-1000px}
+        100% {left:0px}
+    }
+
+
+    #slider{
+        margin-right: 0;
+        margin-left: 0;
+        width: 100vw;
+    }
+
+    #slide{
+        width : 100vw;
+    }
+
+
+    #blocMap{
+        display: block;
+        width: 100%;
+    
+    }
+
+    #flexInfo{
+        width: 100vw;
+        margin: auto;
+    }
+
+    #blockCanvas{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #ficheReservation {
+        width: 100vw;
+    }
+
+    #annulerReservation {
+        display: block;
+        margin : auto;
+        margin-bottom: 10px;
+    }
+
+    #canvas{
+        display: block;
+        margin : auto;
+    }
+
+    #canvasContainer{
+        display: block;
+        width: 100%;
+    }
+
+    #boutonCanvas{
+        font-size: 40%;
+    }
+
+
+}
+
